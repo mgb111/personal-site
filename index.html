@@ -1,210 +1,980 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Manish Bhanushali is an XR and AI Content Strategist who specializes in creating innovative experiences and tailored solutions for immersive tech brands.">
-  <meta name="keywords" content="XR, AI, Content Strategy, AR, VR, B2B, Blog Writing, Thought Leadership">
-  <meta name="author" content="Manish Bhanushali">
-  <title>XR & AI Content Strategist | Manish Bhanushali</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <style>
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
-      background: #fff9f0;
-      color: #1e2a38; /* Navy blue */
-    }
-    header, footer {
-      background-color: #1e2a38; /* Navy blue */
-      padding: 1.5rem 2rem;
-      text-align: center;
-      box-shadow: 0 0 10px rgba(30, 42, 56, 0.2);
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2.2rem;
-      background: linear-gradient(to right, #ffe6a7, #ffd17e); /* Cream to light yellow */
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-    nav {
-      margin-top: 0.5rem;
-    }
-    nav a {
-      color: #ffd17e; /* Light yellow */
-      margin: 0 1rem;
-      text-decoration: none;
-      font-weight: 600;
-      transition: color 0.3s ease;
-    }
-    nav a:hover {
-      color: #ffffff; /* White on hover */
-    }
-    section {
-      padding: 4rem 2rem;
-      max-width: 960px;
-      margin: auto;
-      border-bottom: 1px solid #e0d6c3; /* Light cream */
-    }
-    h2 {
-      font-size: 2rem;
-      color: #1e2a38; /* Navy blue */
-      margin-bottom: 1rem;
-    }
-    p, li {
-      font-size: 1.1rem;
-      line-height: 1.8;
-      color: #2d3a4a; /* Navy blue */
-    }
-    .cta {
-      background: #1e2a38; /* Navy blue */
-      color: #fff9f0; /* Cream */
-      padding: 0.9rem 1.7rem;
-      border: none;
-      border-radius: 8px;
-      font-weight: 700;
-      cursor: pointer;
-      text-decoration: none;
-      display: inline-block;
-      margin-top: 1rem;
-      transition: background 0.3s ease;
-    }
-    .cta:hover {
-      background: #31465c; /* Darker navy blue */
-    }
-    ul {
-      padding-left: 1.5rem;
-    }
-    a.inline-link {
-      color: #1e2a38; /* Navy blue */
-      text-decoration: underline;
-    }
-    footer p {
-      font-size: 0.9rem;
-      color: #ccc7bc; /* Light cream */
-    }
-    .profile-img {
-      max-width: 160px;
-      border-radius: 100px;
-      box-shadow: 0 0 15px rgba(30, 42, 56, 0.3);
-      margin-bottom: 1.5rem;
-    }
-    #about {
-      text-align: center;
-    }
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Manish Bhanushali is an XR and AI Content Strategist who specializes in creating innovative experiences and tailored solutions for immersive tech brands.">
+    <meta name="keywords" content="XR, AI, Content Strategy, AR, VR, B2B, Blog Writing, Thought Leadership">
+    <meta name="author" content="Manish Bhanushali">
+    <title>XR & AI Content Strategist | Manish Bhanushali</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <style>
+        :root {
+            --primary-dark: #1e2a38;      /* Deep navy */
+            --primary-light: #43576b;     /* Slightly lighter navy */
+            --accent: #ffc107;           /* A more vibrant, less pastel yellow */
+            --accent-darker: #e0a800;    /* Darker yellow for hover */
+            --background: #f8f9fa;       /* Light gray background */
+            --text: #343a40;             /* Dark gray text */
+            --border: #dee2e6;           /* Light gray border */
+            --highlight: #fff8e1;        /* Very light yellow highlight */
+            --white: #ffffff;            /* White */
+        }
 
-    /* Mobile Responsiveness */
-    @media (max-width: 768px) {
-      header h1 {
-        font-size: 1.8rem;
-      }
-      nav a {
-        font-size: 1rem;
-        margin: 0 0.8rem;
-      }
-      section {
-        padding: 3rem 1.5rem;
-      }
-      h2 {
-        font-size: 1.6rem;
-      }
-      p, li {
-        font-size: 1rem;
-      }
-      .cta {
-        padding: 0.8rem 1.5rem;
-        font-size: 1.1rem;
-      }
-    }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-    /* Small screen adjustments */
-    @media (max-width: 480px) {
-      header, footer {
-        padding: 1rem;
-      }
-      header h1 {
-        font-size: 1.6rem;
-      }
-      nav {
-        font-size: 0.9rem;
-        margin-top: 1rem;
-      }
-    }
-  </style>
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 80px;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            background: var(--background);
+            color: var(--text);
+            line-height: 1.7;
+        }
+
+        header {
+            background-color: var(--primary-dark);
+            padding: 1.2rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        header.scrolled {
+            padding: 0.7rem 2rem;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-img {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            margin-right: 8px;
+            object-fit: cover;
+            border: 2px solid var(--accent);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 1.6rem;
+            color: var(--white);
+            font-weight: 600;
+        }
+
+        #mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--accent);
+            font-size: 1.3rem;
+            cursor: pointer;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+        }
+
+        nav a {
+            color: var(--white);
+            margin: 0 0.8rem;
+            text-decoration: none;
+            font-weight: 400;
+            font-size: 1rem;
+            transition: color 0.3s ease;
+            padding: 0.4rem 0;
+            position: relative;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: var(--accent);
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--accent);
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        section {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: auto;
+            position: relative;
+        }
+
+        section:not(:last-of-type) {
+            border-bottom: 1px solid var(--border);
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: var(--primary-dark);
+            margin-bottom: 1.2rem;
+            position: relative;
+            display: inline-block;
+            font-weight: 600;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            width: 50%;
+            height: 2px;
+            background-color: var(--accent);
+            bottom: -8px;
+            left: 0;
+        }
+
+        h3 {
+            font-size: 1.3rem;
+            color: var(--primary-dark);
+            margin: 1.2rem 0 0.7rem;
+            font-weight: 500;
+        }
+
+        p, li {
+            font-size: 1rem;
+            line-height: 1.7;
+            color: var(--text);
+            margin-bottom: 0.8rem;
+        }
+
+        .cta {
+            background: var(--accent);
+            color: var(--primary-dark);
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 1rem;
+            transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .cta:hover {
+            background: var(--accent-darker);
+            transform: translateY(-1px);
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+            color: var(--primary-dark);
+        }
+
+        ul {
+            padding-left: 1.3rem;
+            margin-bottom: 1.2rem;
+        }
+
+        a.inline-link {
+            color: var(--accent);
+            text-decoration: underline;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        a.inline-link:hover {
+            color: var(--primary-dark);
+        }
+
+        footer {
+            background-color: var(--primary-dark);
+            padding: 2rem 2rem;
+            text-align: center;
+            box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        footer p {
+            font-size: 0.85rem;
+            color: #adb5bd;
+            margin-bottom: 0.4rem;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin: 0.8rem 0;
+        }
+
+        .social-links a {
+            color: var(--white);
+            font-size: 1.2rem;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: var(--accent);
+            transform: translateY(-2px);
+        }
+
+        .profile-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 1.8rem;
+        }
+
+        .profile-img {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.15);
+            border: 3px solid var(--white);
+            transition: transform 0.3s ease;
+        }
+
+        .profile-img:hover {
+            transform: scale(1.02);
+        }
+
+        #about {
+            text-align: center;
+        }
+
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+            margin: 1.5rem 0;
+            justify-content: center;
+        }
+
+        .skill-pill {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 50px;
+            padding: 0.4rem 0.8rem;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--primary-dark);
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .skill-pill:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .service-card {
+            background: var(--white);
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-bottom: 2px solid var(--accent);
+        }
+
+        .service-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        .service-icon {
+            font-size: 2rem;
+            color: var(--accent);
+            margin-bottom: 0.8rem;
+        }
+
+        .service-card h3 {
+            margin-top: 0;
+            font-size: 1.2rem;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .portfolio-item {
+            background: var(--white);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .portfolio-item:hover {
+            transform: translateY(-3px);
+        }
+
+        .portfolio-img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+        }
+
+        .portfolio-content {
+            padding: 1.2rem;
+        }
+
+        .portfolio-content h3 {
+            margin-top: 0;
+            font-size: 1.1rem;
+        }
+
+        .testimonial-container {
+            margin: 2.5rem 0;
+            position: relative;
+        }
+
+        .testimonial {
+            background: var(--white);
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            margin: 0 0.8rem;
+            text-align: center;
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            position: relative;
+            padding: 0 0.8rem;
+            font-size: 0.95rem;
+        }
+
+        .testimonial-text::before,
+        .testimonial-text::after {
+            content: '"';
+            font-size: 1.5rem;
+            color: var(--accent);
+            position: absolute;
+        }
+
+        .testimonial-text::before {
+            left: -8px;
+            top: -8px;
+        }
+
+        .testimonial-text::after {
+            right: -8px;
+            bottom: -8px;
+        }
+
+        .testimonial-author {
+            margin-top: 1rem;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .testimonial-role {
+            font-size: 0.8rem;
+            color: var(--primary-light);
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .blog-card {
+            background: var(--white);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-3px);
+        }
+
+        .blog-img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+        }
+
+        .blog-content {
+            padding: 1.2rem;
+        }
+
+        .blog-date {
+            font-size: 0.75rem;
+            color: var(--primary-light);
+            margin-bottom: 0.4rem;
+        }
+
+        .blog-title {
+            font-size: 1.1rem;
+            margin-bottom: 0.6rem;
+            font-weight: 500;
+        }
+
+        .blog-excerpt {
+            font-size: 0.9rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .read-more {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--accent);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            transition: color 0.3s ease;
+        }
+
+        .read-more:hover {
+            color: var(--primary-dark);
+        }
+
+        .read-more i {
+            margin-left: 0.3rem;
+            transition: transform 0.3s ease;
+        }
+
+        .read-more:hover i {
+            transform: translateX(3px);
+        }
+
+        .highlight-box {
+            background: var(--highlight);
+            border-left: 4px solid var(--accent);
+            padding: 1.2rem;
+            border-radius: 0 6px 6px 0;
+            margin: 1.5rem 0;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .contact-info {
+            background: var(--white);
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .contact-form {
+            background: var(--white);
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .form-group {
+            margin-bottom: 1.2rem;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 0.3rem;
+            font-weight: 500;
+            color: var(--primary-dark);
+        }
+
+        .form-input,
+        .form-textarea {
+            width: 100%;
+            padding: 0.7rem;
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            transition: border 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .form-input:focus,
+        .form-textarea:focus {
+            outline: none;
+            border-color: var(--accent);
+            box-shadow: 0 0 0 2px rgba(255, 193, 7, 0.2);
+        }
+
+        .form-textarea {
+            min-height: 130px;
+            resize: vertical;
+        }
+
+        .contact-method {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.2rem;
+        }
+
+        .contact-icon {
+            width: 36px;
+            height: 36px;
+            background: var(--accent);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-dark);
+            margin-right: 0.8rem;
+            flex-shrink: 0;
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 40px;
+            height: 40px;
+            background: var(--primary-dark);
+            color: var(--accent);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 999;
+        }
+
+        .back-to-top.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background: var(--primary-light);
+            transform: translateY(-3px);
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 992px) {
+            section {
+                padding: 3rem 1.5rem;
+            }
+
+            .services-grid,
+            .portfolio-grid,
+            .blog-grid,
+            .contact-grid {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            }
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.4rem;
+            }
+
+            #mobile-menu-btn {
+                display: block;
+            }
+
+            nav {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: var(--primary-dark);
+                flex-direction: column;
+                padding: 0;
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.5s ease;
+            }
+
+            nav.active {
+                max-height: 300px;
+                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+            }
+
+            nav a {
+                margin: 0;
+                padding: 1rem 2rem;
+                width: 100%;
+                text-align: center;
+                border-bottom: 1px solid rgba(255, 209, 126, 0.1);
+            }
+
+            nav a::after {
+                display: none;
+            }
+
+            section {
+                padding: 2.5rem 1rem;
+            }
+
+            h2 {
+                font-size: 1.8rem;
+            }
+
+            p,
+            li {
+                font-size: 1rem;
+            }
+
+            .cta {
+                padding: 0.8rem 1.5rem;
+                font-size: 1rem;
+            }
+
+            .profile-img {
+                width: 150px;
+                height: 150px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header,
+            footer {
+                padding: 1rem;
+            }
+
+            .header-container {
+                padding: 0;
+            }
+
+            header h1 {
+                font-size: 1.2rem;
+            }
+
+            section {
+                padding: 2rem 1rem;
+            }
+
+            h2 {
+                font-size: 1.6rem;
+            }
+
+            .services-grid,
+            .portfolio-grid,
+            .blog-grid,
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .profile-img {
+                width: 120px;
+                height: 120px;
+            }
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <h1>Manish Bhanushali – XR & AI Content Strategist</h1>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#services">Services</a>
-      <a href="#portfolio">Portfolio</a>
-      <a href="#blog">Blog</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+    <header id="header">
+        <div class="header-container">
+            <div class="logo">
+                <img src="/api/placeholder/80/80" alt="MB" class="logo-img" />
+                <h1>Manish Bhanushali</h1>
+            </div>
+            <button id="mobile-menu-btn"><i class="fas fa-bars"></i></button>
+            <nav id="nav">
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#portfolio">Portfolio</a>
+                <a href="#testimonials">Testimonials</a>
+                <a href="#blog">Blog</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
 
-  <section id="hero">
-    <h2>I help XR & AI companies grow with smart, strategic content.</h2>
-    <p>From immersive tech storytelling to B2B lead generation, I craft content that connects, converts, and elevates your brand.</p>
-    <a href="#contact" class="cta">Work with me</a>
-  </section>
+    <section id="hero" data-aos="fade-up">
+        <h2>I help XR & AI companies grow with smart, strategic content.</h2>
+        <p>From immersive tech storytelling to B2B lead generation, I craft content that connects, converts, and elevates your brand in the rapidly evolving digital landscape.</p>
+        <a href="#contact" class="cta">Work with me</a>
+    </section>
 
-  <section id="about">
-    <img src="background-removed.webp" alt="Manish Bhanushali" class="profile-img" />
-    <h2>About Me</h2>
-    <p>Hi, I’m Manish Bhanushali. With 9+ years in the immersive tech space, I’ve worked at the intersection of content and cutting-edge innovation.</p>
-    <p>I specialize in making complex XR and AI concepts relatable and results-driven — so your customers not only understand your product, they’re excited by it.</p>
-    <p>🎯 <strong>Experience:</strong> From startup MVPs to enterprise XR platforms, I’ve strategized content that drives awareness, education, and conversions.</p>
-    <p>🔍 <strong>Approach:</strong> Research-led. Customer-focused. Designed to scale with your product and GTM goals.</p>
-    <p>🌱 <strong>What sets me apart:</strong> I understand tech, marketing, and the human angle — and I bring it all together into clear, compelling content.</p>
-  </section>
+    <section id="about" data-aos="fade-up">
+        <div class="profile-container">
+            <img src="/api/placeholder/320/320" alt="Manish Bhanushali" class="profile-img" />
+            <h2>About Me</h2>
+        </div>
+        <p>Hi, I'm Manish Bhanushali. With 9+ years in the immersive tech space, I've worked at the intersection of content and cutting-edge innovation.</p>
+        <p>I specialize in making complex XR and AI concepts relatable and results-driven — so your customers not only understand your product, they're excited by it.</p>
 
-  <section id="services">
-    <h2>Services</h2>
-    <ul>
-      <li><strong>📈 B2B Content Strategy for XR/AI Brands:</strong> A full roadmap of what to say, how to say it, and where to distribute it for maximum reach.</li>
-      <li><strong>✍️ Technical Blog Writing & Thought Leadership:</strong> Deep-dive blogs that position you as a category leader and help with SEO + demand gen.</li>
-      <li><strong>📄 Case Studies & Whitepapers:</strong> Structured storytelling that proves ROI, builds trust, and supports your sales pipeline.</li>
-      <li><strong>🧠 LinkedIn Ghostwriting for Founders:</strong> Let your vision shine through in compelling posts tailored to your tone and audience.</li>
-      <li><strong>🎯 Go-to-Market Messaging:</strong> Launch your XR/AI product with the right words and positioning from day one.</li>
-    </ul>
-  </section>
+        <div class="highlight-box">
+            <p>🎯 <strong>Experience:</strong> From startup MVPs to enterprise XR platforms, I've strategized content that drives awareness, education, and conversions.</p>
+            <p>🔍 <strong>Approach:</strong> Research-led. Customer-focused. Designed to scale with your product and GTM goals.</p>
+            <p>🌱 <strong>What sets me apart:</strong> I understand tech, marketing, and the human angle — and I bring it all together into clear, compelling content.</p>
+        </div>
 
-  <section id="portfolio">
-    <h2>Portfolio</h2>
-    <p>Here’s a quick look at some recent and relevant work:</p>
-    <ul>
-      <li><strong>XR Training Platform –</strong> Helped position an enterprise VR training tool with content used across pitch decks, case studies, and the product microsite.</li>
-      <li><strong>AI Ethics Blog Series –</strong> Ghostwrote a 5-part series for an AI startup founder covering bias, model transparency, and regulation.</li>
-      <li><strong>LinkedIn Personal Branding –</strong> Created weekly thought leadership content for a computer vision startup founder. Increased engagement by 3x in 60 days.</li>
-    </ul>
-    <p><a href="#contact" class="inline-link">Request writing samples</a></p>
-  </section>
+        <h3>My Skills</h3>
+        <div class="skills-container">
+            <span class="skill-pill">XR Content Strategy</span>
+            <span class="skill-pill">AR/VR Storytelling</span>
+            <span class="skill-pill">AI Ethics Writing</span>
+            <span class="skill-pill">B2B Tech Marketing</span>
+            <span class="skill-pill">Thought Leadership</span>
+            <span class="skill-pill">Case Study Development</span>
+            <span class="skill-pill">Go-to-Market Messaging</span>
+            <span class="skill-pill">SEO-Driven Content</span>
+            <span class="skill-pill">Brand Voice Development</span>
+            <span class="skill-pill">Technical Blog Writing</span>
+        </div>
+    </section>
 
-  <section id="blog">
-    <h2>Blog</h2>
-    <p>I write about XR trends, AI ethics, content strategy, and storytelling for emerging tech. Here are a few posts coming soon:</p>
-    <ul>
-      <li>🔍 “From Immersion to Emotion: Why XR Needs Better Stories”</li>
-      <li>🧠 “Writing for AI Products: Clarity, Trust, and Value”</li>
-      <li>📊 “B2B Marketing That Doesn't Suck (Even in XR)”</li>
-    </ul>
-    <p><a href="#contact" class="inline-link">Want me to cover something specific? Let me know.</a></p>
-  </section>
+    <section id="services" data-aos="fade-up">
+        <h2>Services</h2>
+        <p>Strategic content solutions tailored for XR and AI companies looking to build authority, engage audiences, and drive conversions.</p>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Let’s collaborate on your next big idea. Whether you need a content strategist or just some quick advice, I’m always happy to chat.</p>
-    <p><strong>Email:</strong> <a href="mailto:www.manishbhanushali1101@gmail.com" class="inline-link">www.manishbhanushali1101@gmail.com</a></p>
-    <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/manish-b-108622138/" class="inline-link" target="_blank">Manish Bhanushali</a></p>
-    <a href="mailto:your.email@example.com" class="cta">Send an Email</a>
-  </section>
+        <div class="services-grid">
+            <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="service-icon"><i class="fas fa-chart-line"></i></div>
+                <h3>B2B Content Strategy</h3>
+                <p>A comprehensive roadmap of what to say, how to say it, and where to distribute it for maximum reach and impact in the XR/AI space.</p>
+            </div>
 
-  <footer>
-    <p>© 2025 Manish Bhanushali.</p>
-  </footer>
+            <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="service-icon"><i class="fas fa-pen-fancy"></i></div>
+                <h3>Technical Blog Writing</h3>
+                <p>Deep-dive blogs that position you as a category leader while helping with SEO and demand generation in the immersive tech market.</p>
+            </div>
+
+            <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="service-icon"><i class="fas fa-file-alt"></i></div>
+                <h3>Case Studies & Whitepapers</h3>
+                <p>Structured storytelling that proves ROI, builds trust, and supports your sales pipeline with compelling customer success narratives.</p>
+            </div>
+
+            <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+                <div class="service-icon"><i class="fab fa-linkedin"></i></div>
+                <h3>LinkedIn Ghostwriting</h3>
+                <p>Let your vision shine through in compelling posts tailored to your tone and audience, building your personal brand as an XR/AI thought leader.</p>
+            </div>
+
+            <div class="service-card" data-aos="fade-up" data-aos-delay="500">
+                <div class="service-icon"><i class="fas fa-bullseye"></i></div>
+                <h3>Go-to-Market Messaging</h3>
+                <p>Launch your XR/AI product with the right words and positioning from day one, ensuring market fit and customer understanding.</p>
+            </div>
+
+            <div class="service-card" data-aos="fade-up" data-aos-delay="600">
+                <div class="service-icon"><i class="fas fa-sitemap"></i></div>
+                <h3>Content Audits & Optimization</h3>
+                <p>Strategic assessment of your existing content with actionable recommendations to improve performance and alignment with business goals.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" data-aos="fade-up">
+        <h2>Portfolio</h2>
+        <p>A selection of successful projects where strategic content made all the difference for XR and AI brands:</p>
+
+        <div class="portfolio-grid">
+            <div class="portfolio-item" data-aos="fade-up" data-aos-delay="100">
+                <img src="/api/placeholder/400/300" alt="XR Training Platform" class="portfolio-img" />
+                <div class="portfolio-content">
+                    <h3>XR Training Platform</h3>
+                    <p>Developed positioning strategy and core content for an enterprise VR training solution, used across pitch decks, case studies, and product microsite.</p>
+                    <p><strong>Result:</strong> 40% increase in qualified leads and successful enterprise adoption.</p>
+                </div>
+            </div>
+
+            <div class="portfolio-item" data-aos="fade-up" data-aos-delay="200">
+                <img src="/api/placeholder/400/300" alt="AI Ethics Blog Series" class="portfolio-img" />
+                <div class="portfolio-content">
+                    <h3>AI Ethics Blog Series</h3>
+                    <p>Ghostwrote a 5-part thought leadership series for an AI startup founder covering bias, model transparency, and industry regulation.</p>
+                    <p><strong>Result:</strong> Series led to speaking opportunities at two major industry conferences.</p>
+                </div>
+            </div>
+
+            <div class="portfolio-item" data-aos="fade-up" data-aos-delay="300">
+                <img src="/api/placeholder/400/300" alt="LinkedIn Branding" class="portfolio-img" />
+                <div class="portfolio-content">
+                    <h3>LinkedIn Personal Branding</h3>
+                    <p>Created weekly thought leadership content for a computer vision startup founder with industry insights and technical explainers.</p>
+                    <p><strong>Result:</strong> Increased engagement by 3x in 60 days, leading to key partnership opportunities.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="highlight-box" data-aos="fade-up">
+            <p>Want to see writing samples relevant to your specific industry or use case? <a href="#contact" class="inline-link">Contact me</a> for a customized portfolio presentation.</p>
+        </div>
+    </section>
+
+    <section id="testimonials" data-aos="fade-up">
+        <h2>What Clients Say</h2>
+        <p>Here's what partners and clients have to say about working with me:</p>
+
+        <div class="testimonial-container">
+            <div class="testimonial" data-aos="fade-up" data-aos-delay="100">
+                <p class="testimonial-text">Manish has a rare talent for making complex XR concepts not just understandable but exciting. Our technical blog posts now drive 2x more qualified leads since he took over our content strategy.</p>
+                <p class="testimonial-author">Sarah Chen</p>
+                <p class="testimonial-role">CMO, ImmerseTech Solutions</p>
+            </div>
+        </div>
+
+        <div class="testimonial-container">
+            <div class="testimonial" data-aos="fade-up" data-aos-delay="200">
+                <p class="testimonial-text">Working with Manish transformed how we communicate our AI platform's value. He captured our vision perfectly while making it accessible to non-technical decision makers—exactly what we needed.</p>
+                <p class="testimonial-author">David Rodriguez</p>
+                <p class="testimonial-role">Founder, NeuralSight AI</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="blog" data-aos="fade-up">
+        <h2>Blog</h2>
+        <p>I write about XR trends, AI ethics, content strategy, and storytelling for emerging tech. Here are my latest insights:</p>
+
+        <div class="blog-grid">
+            <div class="blog-card" data-aos="fade-up" data-aos-delay="100">
+                <img src="/api/placeholder/400/250" alt="The Future of AR in Retail" class="blog-img" />
+                <div class="blog-content">
+                    <p class="blog-date">April 15, 2025</p>
+                    <h3 class="blog-title">The Future of AR in Retail: Enhancing Customer Experience</h3>
+                    <p class="blog-excerpt">Explore how augmented reality is revolutionizing the retail industry, from virtual try-ons to immersive shopping experiences.</p>
+                    <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <div class="blog-card" data-aos="fade-up" data-aos-delay="200">
+                <img src="/api/placeholder/400/250" alt="Ethical Considerations in AI" class="blog-img" />
+                <div class="blog-content">
+                    <p class="blog-date">March 28, 2025</p>
+                    <h3 class="blog-title">Navigating the Ethical Landscape of Artificial Intelligence</h3>
+                    <p class="blog-excerpt">An in-depth look at the critical ethical considerations surrounding the development and deployment of AI technologies.</p>
+                    <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <div class="blog-card" data-aos="fade-up" data-aos-delay="300">
+                <img src="/api/placeholder/400/250" alt="VR for Enterprise Training" class="blog-img" />
+                <div class="blog-content">
+                    <p class="blog-date">March 10, 2025</p>
+                    <h3 class="blog-title">The Benefits of Using Virtual Reality for Enterprise Training</h3>
+                    <p class="blog-excerpt">Discover how VR is transforming corporate training programs by providing immersive and engaging learning experiences.</p>
+                    <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" data-aos="fade-up">
+        <h2>Let's Connect</h2>
+        <p>Ready to discuss your content needs or just say hello? Reach out—I'm always open to new conversations and collaborations in the XR and AI space.</p>
+
+        <div class="contact-grid">
+            <div class="contact-info" data-aos="fade-up" data-aos-delay="100">
+                <h3>Contact Information</h3>
+                <div class="contact-method">
+                    <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                    <p><a href="mailto:manish@example.com" class="inline-link">manish@example.com</a></p>
+                </div>
+                <div class="contact-method">
+                    <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                    <p>+91 9876543210</p>
+                </div>
+                <div class="contact-method">
+                    <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                    <p>Mumbai, Maharashtra, India</p>
+                </div>
+            </div>
+
+            <div class="contact-form" data-aos="fade-up" data-aos-delay="200">
+                <h3>Send me a message</h3>
+                <form>
+                    <div class="form-group">
+                        <label for="name" class="form-label">Your Name</label>
+                        <input type="text" id="name" class="form-input" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="email" class="form-label">Your Email</label>
+                        <input type="email" id="email" class="form-input" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="message" class="form-label">Your Message</label>
+                        <textarea id="message" class="form-textarea" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="cta">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer id="footer">
+        <p>&copy; 2025 Manish Bhanushali. All Rights Reserved.</p>
+        <div class="social-links">
+            <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
+    </footer>
+
+    <a href="#header" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+
+        const header = document.getElementById('header');
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const nav = document.getElementById('nav');
+        const backToTop = document.querySelector('.back-to-top');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
+                backToTop.classList.add('show');
+            } else {
+                header.classList.remove('scrolled');
+                backToTop.classList.remove('show');
+            }
+        });
+
+        mobileMenuBtn.addEventListener('click', () => {
+            nav.classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
